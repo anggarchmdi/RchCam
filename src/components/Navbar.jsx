@@ -1,7 +1,18 @@
 import React from 'react'
 import LogoImg from '../assets/Logo.png'
+import { useNavigate } from 'react-router-dom'
 
 function Navbar() {
+    const navigate = useNavigate();
+
+    const handleLogin = () => {
+        navigate('/login');
+    }
+
+    const handleRegister = () => {
+        navigate('/register');
+    }
+
   return (
     <div className='w-full container mx-auto shadow-md bg-slate-900 top-0 fixed z-10'>
     <div className="p-2 grid grid-cols-2">
@@ -14,9 +25,9 @@ function Navbar() {
         </div>
             {/* Button */}
             <div className="flex justify-end ml-auto items-center gap-4 mr-4">
-               <button className='text-white transition-all transform hover:scale-90 duration-300 text-[1.1rem]'>Login</button>
+               <button className='text-white transition-all transform hover:scale-90 duration-300 text-[1.1rem]' onClick={handleLogin}>Login</button>
                <span className='bg-white h-8 w-0.5'></span>
-               <button className='text-white transition-all transform hover:scale-90 duration-300 text-[1.1rem]'>Daftar</button>
+               <button className='text-white transition-all transform hover:scale-90 duration-300 text-[1.1rem]' onClick={handleRegister}>Daftar</button>
             </div>
     </div>
     </div>
