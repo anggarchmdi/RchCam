@@ -14,7 +14,7 @@ function Navbar() {
     }
 
   return (
-    <div className='w-full container mx-auto shadow-md bg-slate-900 top-0 fixed z-10'>
+    <div className='w-full container mx-auto shadow-md bg-slate-900 top-0 fixed z-20'>
     <div className="p-2 grid grid-cols-2">
         <div className="flex justify-start">
             {/* Logo */}
